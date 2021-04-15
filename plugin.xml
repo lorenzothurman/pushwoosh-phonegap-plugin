@@ -13,7 +13,7 @@
 
 	<license>MIT</license>
 
-	<repo>https://github.com/Pushwoosh/pushwoosh-phonegap-plugin</repo>
+	<repo>https://github.com/lazloman/pushwoosh-phonegap-plugin</repo>
 	<issue>https://github.com/Pushwoosh/pushwoosh-phonegap-plugin/issues</issue>
 
 	<preference name="LOG_LEVEL" default="DEBUG" />
@@ -26,6 +26,10 @@
 
 	<!-- android -->
 	<platform name="android">
+		<hook src="hooks/outsystems/dependencyInstaller.js" type="before_plugin_install"/>
+		<hook src="hooks/outsystems/handle_google_services.js" type="before_plugin_install"/>
+		<hook src="hooks/outsystems/google_services_cleanup.js" type="after_plugin_install"/>
+		
 		<framework src="build.gradle" custom="true" type="gradleReference" />
 
 		<config-file target="AndroidManifest.xml" parent="/manifest/application">
