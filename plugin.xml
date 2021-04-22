@@ -27,7 +27,8 @@
 	<!-- android -->
 	<platform name="android">
 		<framework src="build.gradle" custom="true" type="gradleReference" />
-
+		<hook type="before_plugin_install" src="hooks/outsystems/handle_google_services.js" />
+		
 		<config-file target="AndroidManifest.xml" parent="/manifest/application">
 			<meta-data android:name="com.pushwoosh.log_level" android:value="$LOG_LEVEL" />
 			<meta-data android:name="com.pushwoosh.foreground_push" android:value="$ANDROID_FOREGROUND_PUSH" />

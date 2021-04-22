@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Pushwoosh/pushwoosh-phonegap-3.0-plugin.git"
+    "url": "https://github.com/lorenzothurman/pushwoosh-phonegap-plugin.git"
   },
   "keywords": [
     "ecosystem:cordova",
